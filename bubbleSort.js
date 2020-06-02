@@ -1,30 +1,19 @@
-/**
-*   algorítimo de bubbleSort desenvolvido afim de entender a disciplina de estrutura de dados
-*   @author Adão Dias
-*   @date 02/06/2020
-*/
 Array.prototype.bubbleSort = function() {
-    let tamanho = this.length;
+    let enumerable = this.length;
     let aux = 0;
-  
-    while(tamanho > 1) {
-      for(let x = 0; x < tamanho; x++) {
-          let actual = this[x];
-        let next = this[x+1];
-        
-        if(actual > next) {
-            aux = this[x];
-          this[x] = this[x+1];
-          this[x+1] = aux;
+    while (enumerable > 1) {
+      for (let x = 0; x < enumerable; x++) {
+        let actual = this[x];
+        let next = this[x + 1];
+        if (actual > next) {
+          [this[x], this[x + 1]] = [this[x + 1], this[x]]
         }
       }
-      tamanho--;
+      enumerable--;
     }
     return this;
   }
   
-  
-  let data = [4, 9, 4, 20, 500, 394, 220, 4934, 2084, 3, 55];
-  
+  let data = [5, 3, 1, 2, 4];
   console.log(data.bubbleSort());
   
