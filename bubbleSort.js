@@ -1,6 +1,5 @@
 Array.prototype.bubbleSort = function () {
   let enumerable = this.length;
-  let aux = 0;
   let finished;
   do {
     finished = false;
