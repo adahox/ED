@@ -1,4 +1,5 @@
 /**
+ * Merge Sort Data Structure. 
  * @author Adão Dias <adahox@gmail.com>
  */
 Array.prototype.mergeSort = function () {
