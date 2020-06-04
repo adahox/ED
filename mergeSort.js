@@ -1,3 +1,6 @@
+/**
+ * @author Adão Dias <adahox@gmail.com>
+ */
 Array.prototype.mergeSort = function () {
   const merge = function (left, right) {
     let result = [];

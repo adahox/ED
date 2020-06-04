@@ -1,3 +1,6 @@
+/**
+ * @author Adão Dias <adahox@gmail.com>
+ */
 Array.prototype.bubbleSort = function () {
   let enumerable = this.length;
   let finished;
