@@ -1,7 +1,6 @@
-Array.prototype.intercalate = function (left, right) {};
-
 Array.prototype.mergeSort = function () {
-  const intercalate = function (left, right) {
+
+  const merge = function (left, right) {
     let result = [];
 
     while (left.length && right.length) {
@@ -22,7 +21,7 @@ Array.prototype.mergeSort = function () {
   let middle = Math.floor(this.length / 2);
   let left = this.slice(0, middle);
   let right = this.slice(middle, this.length);
-  return intercalate(left.mergeSort(), right.mergeSort());
+  return merge(left.mergeSort(), right.mergeSort());
 };
 
 let arr = [5, 4, 300, 2, 9, 10, 500];
