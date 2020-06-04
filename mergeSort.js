@@ -1,8 +1,6 @@
 Array.prototype.mergeSort = function () {
-
   const merge = function (left, right) {
     let result = [];
-
     while (left.length && right.length) {
       if (left[0] <= right[0]) {
         result.push(left.shift());
@@ -11,9 +9,10 @@ Array.prototype.mergeSort = function () {
       }
     }
 
-    while (left.length) result.push(left.shift());
-    while (right.length) result.push(right.shift());
-
+	while (left.length) 
+		result.push(left.shift());
+	while (right.length) 
+		result.push(right.shift());
     return result;
   };
 
@@ -25,5 +24,4 @@ Array.prototype.mergeSort = function () {
 };
 
 let arr = [5, 4, 300, 2, 9, 10, 500];
-
 console.log(arr.mergeSort());
