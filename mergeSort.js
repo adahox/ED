@@ -17,7 +17,8 @@ Array.prototype.mergeSort = function () {
 		result.push(left.shift());
 	while (right.length) 
 		result.push(right.shift());
-    return result;
+	return result;
+	
   };
 
   if (this.length < 2) return this;
@@ -29,3 +30,4 @@ Array.prototype.mergeSort = function () {
 
 let arr = [5, 4, 300, 2, 9, 10, 500];
 console.log(arr.mergeSort());
+arr.mergeSort().merge()
