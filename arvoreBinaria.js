@@ -36,10 +36,15 @@ class Node {
 
 class ArvoreBinaria {
     raiz = null;    
+    altura 
     constructor() {}
 
     inserir(v) {
         this.raiz = this._insere(v, this.raiz);
+    }
+
+    pesquisa(v) {
+        return this._pesquisa(v, this.raiz);
     }
 
     _insere(value, raiz) {
@@ -56,6 +61,20 @@ class ArvoreBinaria {
         }
         return raiz;
     }
+
+    _pesquisa(v, no) {
+        let resp = null;
+        if(no == null) {
+            resp = false;
+        } else if(v == no.value) {
+            resp = true;
+        } else if(v > no.value) {
+            resp = this._pesquisa(v, no.right);
+        } else if(v < no.value) {
+            resp = this._pesquisa(v, no.left);
+        }
+        return resp;
+    }
 }
 
 let three = new ArvoreBinaria();
@@ -66,7 +85,8 @@ three.inserir(1);
 three.inserir(4);
 three.inserir(5);
 
+console.log(three.pesquisa(40)); // false
+console.log(three.pesquisa(1));  // true
 
-console.dir(three);
 
 
